@@ -1,9 +1,8 @@
-package java;
+package java_study;
 
 import org.junit.*;
 
 public class TestStrings {
-	
 	@Test
 	//True (Reference)
 	public void test01() {
@@ -80,7 +79,28 @@ public class TestStrings {
 	@Test
 	//Reverse String using StringBuffer class. Why not print(?)
 	public void test10() {
-	      StringBuffer a = new StringBuffer("hello");
+	      StringBuffer a = new StringBuffer("hello5");
 	      System.out.println("StringBuffer: " + a.reverse());
 	}
+	
+	@Test
+	public void test11() {
+		System.out.println(this.toString());
+	}
+	
+	@Override
+	public String toString() {
+	    StringBuilder result = new StringBuilder();
+	    String NEW_LINE = System.getProperty("line.separator");
+
+	    result.append(this.getClass().getName() + " Object {" + NEW_LINE);
+	    result.append(" Fruit: " + fruitAttribute + NEW_LINE);
+	    result.append("Vegetable: " + vegetableAttribute + NEW_LINE);
+	    result.append("}");
+	    
+	    return result.toString();
+	}
+	
+	private String fruitAttribute = "banana";
+	private String vegetableAttribute = "rutabaga";
 }
