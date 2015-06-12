@@ -1,5 +1,7 @@
 package java_study;
 
+import java.util.Date;
+
 import org.junit.*;
 
 public class TestStrings {
@@ -90,10 +92,13 @@ public class TestStrings {
 	
 	@Override
 	public String toString() {
+		Date dateNow = new Date();
 	    StringBuilder result = new StringBuilder();
+	    
 	    String NEW_LINE = System.getProperty("line.separator");
 
 	    result.append(this.getClass().getName() + " Object {" + NEW_LINE);
+	    result.append(" Date: " + dateNow + NEW_LINE);
 	    result.append(" Fruit: " + fruitAttribute + NEW_LINE);
 	    result.append("Vegetable: " + vegetableAttribute + NEW_LINE);
 	    result.append("}");
