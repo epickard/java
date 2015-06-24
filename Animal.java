@@ -1,6 +1,6 @@
 package java_study;
 
-public class Animal {
+abstract class Animal {
 	
 	//Parrt of polymorphism example
 	 public void makeNoise() {
