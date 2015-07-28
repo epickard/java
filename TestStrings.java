@@ -86,7 +86,17 @@ public class TestStrings {
 	}
 	
 	@Test
+	//Traverse an array
 	public void test11() {
+		String[] elements = {"a", "b", "c", "d"};
+		
+		for (String e : elements) {
+			System.out.println("Array value is: " + e);
+		}
+	}
+	
+	@Test
+	public void test12() {
 		System.out.println(this.toString());
 	}
 	
